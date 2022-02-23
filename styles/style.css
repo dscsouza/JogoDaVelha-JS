@@ -1,3 +1,13 @@
+
+@keyframes pulsar {
+    0%{color: white}
+    50%{color:blue}
+    75%{color:whitesmoke}
+    100%{color: blue}
+  
+}
+
+
 body{
     text-align: center;
     padding: 0px;
@@ -131,6 +141,20 @@ img{
 .botao:hover{
     color: blue;
     cursor: pointer;
+
+}
+
+.pulse{
+    
+
+    animation-name: pulsar;
+    animation-duration: 3s;
+
+    /* aqui indica quantas vezes a animação se repetirá */
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+
+    color:blue;
 
 }
 
