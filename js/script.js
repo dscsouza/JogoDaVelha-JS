@@ -47,43 +47,49 @@ var indicesClass = [{
     "2,1":"p8",
     "2,2":"p9"   
 },{ 
-
-    "p1":"2,0",
-    "p2":"0,1",
-    "p3":"0,2",
-    "p4":"1,0",
-    "p5":"1,1",
-    "p6":"1,2",
-    "p7":"2,0",
-    "p8":"2,1",
-    "p9":"2,2"
+    "p1":[0,0],
+    "p2":[0,1],
+    "p3":[0,2],
+    "p4":[1,0],
+    "p5":[1,1],
+    "p6":[1,2],
+    "p7":[2,0],
+    "p8":[2,1],
+    "p9":[2,2]
 }]
 
 
-setTimeout(() => {
-    maquina = document.getElementById("contra_maquina").checked;
-
-    console.log(maquina);
-
-    humano = document.getElementById("contra_player").checked;
-
-    console.log(humano);
-
-    facil = document.getElementById("facil").checked;
-
-    console.log(facil);
-
-    medio = document.getElementById("medio").checked;
-
-    console.log(medio);
-
-    dificil = document.getElementById("dificil").checked;
-
-    console.log(dificil);
 
 
-    
-}, 15);
+
+function checa_menu(){
+
+    setTimeout(() => {
+        maquina = document.getElementById("contra_maquina").checked;
+
+        console.log(maquina);
+
+        humano = document.getElementById("contra_player").checked;
+
+        console.log(humano);
+
+        facil = document.getElementById("facil").checked;
+
+        console.log(facil);
+
+        medio = document.getElementById("medio").checked;
+
+        console.log(medio);
+
+        dificil = document.getElementById("dificil").checked;
+
+        console.log(dificil);
+
+
+        
+    }, 10);
+}
+checa_menu(); //chama a função para inciailizar as variáveis do menu.
 
 
 
@@ -433,13 +439,28 @@ function playAleatoria(){
 }
 
 
+function checa_vazio(a){
+    //localiza as coordenadas do id na matriz
+    console.log("checando id: " + a)
+    x = indicesClass[1][a][0];
+    y = indicesClass[1][a][1];
+
+    if (tabuleiro[x][y] == ""){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 function jogada(j){
+    checa_menu(); // a cada jogada ele verifica se houve alteração nas configurações do menu
+     
     console.log("função jogada");
 
     jogada_atual = document.getElementById(j.id); //seleciona o elemento clicado
     vezDeJogar = document.getElementById("jogador_atual"); // caixa de texto onde é informado qual jogador esta na vez
 
-    if (!gameover){ //se n
+    if (!gameover && checa_vazio(j.id)){ //se não deu game over e se o espaço estiver vazio, segue com a função
         if (jogador){
             jogada_atual.innerHTML = `<img src="./assets/x.png">`;
             jogador = false;
@@ -503,6 +524,7 @@ function jogada(j){
 
 
 function reseta(a){
+    checa_menu();
     //limpa a matriz tabuleiro
     for (var k=0;k<3;k++){
         for (var w=0; w<3; w++){
@@ -512,7 +534,10 @@ function reseta(a){
 
     //limpa as imagens
     for (i in tabMaquina){
+        console.log(i);
+        console.log(tabMaquina[i]);
         document.getElementById(tabMaquina[i]).innerHTML = ``;
+       
     }
     gameover=false;
     jogador = true;
