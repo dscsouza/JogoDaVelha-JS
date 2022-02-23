@@ -1,0 +1,63 @@
+
+
+
+
+placar
+
+
+
+placar
+id="player1"
+id="player2"
+
+id="contra_maquina"
+id="contra_player"
+
+
+maquina = document.getElementById("contra_maquina").checked;
+
+    humano = document.getElementById("contra_player").checked;
+
+    console.log(humano);
+
+    facil = document.getElementById("facil").checked;
+
+    console.log(facil);
+
+    medio = document.getElementById("medio").checked;
+
+    console.log(medio);
+
+    dificil = document.getElementById("dificil").checked;
+
+    console.log(dificil);
+
+
+
+
+
+
+3x3
+
+1 2 3
+4 5 6
+7 8 9
+
+[
+["00" ,"01", "02"], 
+["10", "11", "12"], 
+["20", "21", "22"]
+]
+
+00 - 02, 01 livre
+00 - 20, 10 livre
+02 - 22, 12 livre
+20 - 22, 21 livre
+
+
+
+indicesClass[0]  - de coordenada para Class
+            [1] - de class para coordenada
+
+
+

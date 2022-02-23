@@ -1,0 +1,143 @@
+body{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url(../assets/back.jpg);
+}
+
+.menu{
+    display: flex;
+    
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.m1{
+    font-size: small;
+    background-color:rgba(240, 255, 255, 0.404);
+    width: 20%;
+    height: 100%;
+
+}
+.m15{
+    background-color:rgba(240, 255, 255, 0.404);
+    font-size: small;
+    width: 15%;
+    height: 100%;
+
+}
+.m2{
+    background-color:rgba(240, 248, 255, 0.657);
+    width: 40%;
+    height: 100%;
+    color:brown;
+}
+.m3{
+    background-color:rgba(240, 255, 255, 0.404);
+    width: 25%;
+    height: 100%;
+}
+.player{
+    display: inline;
+    margin: 0px;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+.subtitulo{
+    margin-top: 15px;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+}
+
+
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.tabuleiro{
+    background-image: url("../assets/jogo-da-velha.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 345px;
+    height: 340px;
+    margin: auto;
+}
+
+.container{
+    display: flex;
+    width: 340px;
+    height: 385px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    
+   
+    
+}
+
+img{
+    width: 89px;
+    height: 89px;
+}
+
+.square{
+    border: none;
+    width: 90px;
+    height: 90px;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.caixa{
+    display:inline-flex;
+    
+}
+.botao{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.363);
+    border: 1px solid gray;
+    border-radius: 15%;
+    margin: 15px;
+    margin-top: 20px;
+    width: 90px;
+    height: 50px;
+    
+    /* código para compatibilidade com vários navegadores */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+
+    
+    /* código para compatibilidade com vários navegadores */
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+
+}
+
+.botao:hover{
+    color: blue;
+    cursor: pointer;
+
+}
+
+.footer{
+    background-color: rgba(128, 255, 0, 0.418);
+    font-family:fantasy;
+    
+}
+
+
