@@ -152,6 +152,15 @@ function atualizaPlacar(a){
         empates.innerHTML = empate;
     }
 
+
+    botao_nova = document.getElementById("novapartida");
+    botao_nova.setAttribute('class', 'botao pulse')
+
+    // setTimeout(()=>{
+    //     botao_nova.setAttribute('class', 'botao')
+
+    // },3000)
+
     //reseta(0); 
     //se argumento 0 : novo jogo, se for 1: reinicia tudo
 
@@ -453,6 +462,7 @@ function checa_vazio(a){
 }
 
 function jogada(j){
+    
     checa_menu(); // a cada jogada ele verifica se houve alteração nas configurações do menu
      
     console.log("função jogada");
@@ -526,6 +536,12 @@ function jogada(j){
 function reseta(a){
     checa_menu();
     //limpa a matriz tabuleiro
+    
+    botao_nova = document.getElementById("novapartida");
+    botao_nova.setAttribute('class', 'botao')
+    
+    
+    
     for (var k=0;k<3;k++){
         for (var w=0; w<3; w++){
             tabuleiro[k][w] = "";
